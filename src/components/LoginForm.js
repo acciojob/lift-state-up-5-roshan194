@@ -7,27 +7,32 @@ function LoginForm({ isLoggedIn, onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username && password) {
-      onLogin();
+      onLogin(); // Lifts state to parent
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <h2>Login</h2>
+
+      <label htmlFor="username">Username:</label><br />
       <input
+        id="username"
         type="text"
-        placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         required
       /><br /><br />
+
+      <label htmlFor="password">Password:</label><br />
       <input
+        id="password"
         type="password"
-        placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
       /><br /><br />
+
       <button type="submit">Login</button>
     </form>
   );
