@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function LoginForm({ isLoggedIn, onLogin }) {
   const [username, setUsername] = useState('');
@@ -7,14 +7,12 @@ function LoginForm({ isLoggedIn, onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username && password) {
-      onLogin(); // Lifts state to parent
+      onLogin();
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
-
       <label htmlFor="username">Username:</label><br />
       <input
         id="username"
