@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <h1>Parent Component</h1> {/* Required by test */}
       {isLoggedIn ? (
-        <h2>Welcome, you are now logged in! 🎉</h2>
+        <h2>You are logged in!</h2>
       ) : (
         <LoginForm isLoggedIn={isLoggedIn} onLogin={handleLogin} />
       )}
